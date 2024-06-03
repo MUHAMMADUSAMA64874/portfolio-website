@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script defer src="scripts/main.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+</head>
+<body class="light-mode">
+  <header>
+    <h1 class="fade-in">Welcome to My Portfolio</h1>
+    <p class="fade-in">MUHAMMAD USAMA - Full Stack Developer</p>
+    <nav>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="mode-toggle" class="mode-toggle">Switch to Dark Mode</button>
+  </header>
+  <main>
+    <section id="projects">
+      <h2 class="slide-in">Projects</h2>
+      <div class="project-list">
+        <!-- Projects will be populated here -->
+      </div>
+    </section>
+    <section id="skills">
+      <h2 class="slide-in">Skills</h2>
+      <div class="skills-list">
+        <!-- Skills will be populated here -->
+      </div>
+    </section>
+    <section id="testimonials">
+      <h2 class="slide-in">Testimonials</h2>
+      <div class="testimonials-list">
+        <!-- Testimonials will be populated here -->
+      </div>
+    </section>
+    <section id="contact">
+      <h2 class="slide-in">Contact</h2>
+      <div class="contact-info">
+        <p>Email: <a href="mailto:you@example.com">tahir12721@gmail.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+92 3207101485</a></p>
+        <p>Social: <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a></p>
+      </div>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 MUHAMMAD USAMA. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-body">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Firebase Configuration
+    var firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_AUTH_DOMAIN",
+      databaseURL: "YOUR_DATABASE_URL",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_STORAGE_BUCKET",
+      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</body>
+</html>
